@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author      SWENSON HE
+ * @copyright   Copyright © SWENSON HE (https://www.swensonhe.com)
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="customer_account"/>
+    <body>
+        <referenceBlock name="downloadable_customer_products_list">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">SwensonHe_DownloadableIsVisible::customer/products/list.phtml</argument>
+            </action>
+            <arguments>
+                <argument name="visible_link_renderer" xsi:type="object">SwensonHe\DownloadableIsVisible\ViewModel\ListProducts\Renderer</argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author      SWENSON HE
+ * @copyright   Copyright © SWENSON HE (https://www.swensonhe.com)
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="downloadable_link" resource="default" engine="innodb" comment="Downloadable Link Table">
+        <column xsi:type="smallint" name="is_visible" padding="5" unsigned="true" nullable="false" identity="false"
+                default="1" comment="Visible flag"/>
+    </table>
+</schema>

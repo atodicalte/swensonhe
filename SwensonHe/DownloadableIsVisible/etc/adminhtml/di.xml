@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author      SWENSON HE
+ * @copyright   Copyright © SWENSON HE (https://www.swensonhe.com)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Downloadable\Ui\DataProvider\Product\Form\Modifier\Composite">
+        <arguments>
+            <argument name="modifiers" xsi:type="array">
+                <item name="is_visible" xsi:type="string">SwensonHe\DownloadableIsVisible\Ui\DataProvider\Product\Form\Modifier\Links\Visible</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Magento\Downloadable\Ui\DataProvider\Product\Form\Modifier\Data\Links">
+        <plugin name="add_is_visible_to_admin_data" type="SwensonHe\DownloadableIsVisible\Plugin\LinksDataPlugin"/>
+    </type>
+    <type name="Magento\Downloadable\Model\Product\TypeHandler\Link">
+        <plugin name="save_is_visible_data_to_db" type="SwensonHe\DownloadableIsVisible\Plugin\LinkHandlerPlugin"/>
+    </type>
+</config>
